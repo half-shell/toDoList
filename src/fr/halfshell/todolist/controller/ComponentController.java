@@ -1,7 +1,6 @@
 package fr.halfshell.todolist.controller;
 
 import fr.halfshell.todolist.data.ToDo;
-import fr.halfshell.todolist.data.ToDoList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -39,7 +38,7 @@ public class ComponentController implements Initializable {
     // Reload the ListView with ToDoList
     public void reloadToDoList() {
         lv1.getItems().clear();
-        for (ToDo item : ToDoList.getToDoList()) {
+        for (ToDo item : ToDo.getToDoList()) {
             lv1.getItems().add(item.getDescription());
         }
     }
