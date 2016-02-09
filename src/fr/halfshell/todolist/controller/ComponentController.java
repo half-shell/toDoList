@@ -54,6 +54,3 @@ public class ComponentController implements Initializable {
 
 
 }
-
-
-
