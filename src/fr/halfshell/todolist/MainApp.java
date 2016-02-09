@@ -1,5 +1,7 @@
 <<<<<<< HEAD
-package fr.halfshell.todolist;
+<<<<<<< HEAD
+=======
+>>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 =======
 >>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 /**
@@ -54,11 +56,12 @@ public class MainApp extends Application {
         try {
             FXMLLoader loader = new FXMLLoader();
 <<<<<<< HEAD
+<<<<<<< HEAD
             loader.setLocation(MainApp.class.getResource("../view/TodolistOverview.fxml"));
             AnchorPane todolist = (AnchorPane) loader.load();
 =======
-            loader.setLocation(MainApp.class.getResource("view/TodolistOverview.fxml"));
-            AnchorPane todolist = loader.load();
+=======
+>>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 >>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 
             rootLayout.setCenter(todolist);
