@@ -1,4 +1,5 @@
-package fr.halfshell.todolist;/**
+package fr.halfshell.todolist;
+/**
  * Created by brick on 22/01/16.
  */
 
@@ -8,9 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 public class MainApp extends Application {
@@ -31,11 +29,11 @@ public class MainApp extends Application {
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/rootLayout.fxml"));
-            rootLayout = loader.load();
+            loader.setLocation(MainApp.class.getResource("../view/rootLayout.fxml"));
+            rootLayout = (BorderPane) loader.load();
 
             Scene scene = new Scene(rootLayout);
-            primaryStage.setScene();
+            primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -44,9 +42,9 @@ public class MainApp extends Application {
 
     public void showTodolistOverview() {
         try {
-            FXMLLoader loader = new FXMLLoader()
-            loader.setLocation(MainApp.class.getResource("view/TodolistOverview"));
-            AnchorPane todolist = loader.load();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("../view/TodolistOverview.fxml"));
+            AnchorPane todolist = (AnchorPane) loader.load();
 
             rootLayout.setCenter(rootLayout);
         } catch (IOException e) {
