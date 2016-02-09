@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 package fr.halfshell.todolist;
+=======
+>>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 /**
  * Created by brick on 22/01/16.
  */
+package fr.halfshell.todolist;
 
-import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainApp extends Application {
 
+
     private Stage primaryStage;
     private BorderPane rootLayout;
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -43,17 +53,19 @@ public class MainApp extends Application {
     public void showTodolistOverview() {
         try {
             FXMLLoader loader = new FXMLLoader();
+<<<<<<< HEAD
             loader.setLocation(MainApp.class.getResource("../view/TodolistOverview.fxml"));
             AnchorPane todolist = (AnchorPane) loader.load();
+=======
+            loader.setLocation(MainApp.class.getResource("view/TodolistOverview.fxml"));
+            AnchorPane todolist = loader.load();
+>>>>>>> aa8be51e7329f94878685d28a0fd1eab8d3bf816
 
-            rootLayout.setCenter(rootLayout);
+            rootLayout.setCenter(todolist);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
 }
+
