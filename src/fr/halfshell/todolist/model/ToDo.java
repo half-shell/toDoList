@@ -1,4 +1,4 @@
-package fr.halfshell.todolist.data;
+package fr.halfshell.todolist.model;
 
 import java.util.ArrayList;
 

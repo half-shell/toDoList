@@ -1,6 +1,6 @@
 package fr.halfshell.todolist.controller;
 
-import fr.halfshell.todolist.data.ToDo;
+import fr.halfshell.todolist.model.ToDo;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
