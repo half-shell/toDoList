@@ -1,5 +1,5 @@
 /**
- * Created by brick on 22/01/16.
+ * Created by half-shell on 22/01/16.
  */
 package fr.halfshell.todolist;
 
@@ -22,7 +22,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("My Todo list App");
+        this.primaryStage.setTitle("Awesome to-do list");
 
         showTodolistOverview();
     }
