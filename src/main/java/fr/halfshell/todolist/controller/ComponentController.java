@@ -27,11 +27,20 @@ public class ComponentController implements Initializable {
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
         // Action on button click
         buttonAddToDo.setOnAction(event -> addTf1Text());
+        buttonAddToDo.setOnMouseExited(event-> buttonAddToDo.setStyle("-fx-background-color: dimgray"));
+        buttonAddToDo.setOnMouseEntered(event-> buttonAddToDo.setStyle("-fx-background-color: DarkGray") );
         // Action on ENTER key press
         tf1.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 addTf1Text();
             }
+        });
+        tf1.setOnMouseClicked(event->buttonAddToDo.setText("Add"));
+        lv1.setOnMouseClicked(event->{
+            final int selectedIdx = lv1.getSelectionModel().getSelectedIndex();
+                if (selectedIdx != -1) {
+                      buttonAddToDo.setText("Del");
+                }else buttonAddToDo.setText("Add");
         });
     }
 

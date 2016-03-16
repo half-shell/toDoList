@@ -13,6 +13,9 @@
 
 .list-cell:empty {
   -fx-background-color: dimgray;
+=======
+.list-cell:selected {
+    -fx-background-color: DarkGray;
 }
 
 .scroll-bar:vertical>*.thumb {
