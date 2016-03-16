@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65"
-            fx:controller="fr.halfshell.todolist.controller.ComponentController">
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: gray; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.halfshell.todolist.controller.ComponentController">
     <children>
-        <Button layoutX="524.0" layoutY="355.0" mnemonicParsing="false" text="Button" fx:id="buttonAddToDo"/>
-        <TextField layoutX="14.0" layoutY="355.0" prefHeight="26.0" prefWidth="504.0" fx:id="tf1"/>
-        <ListView layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="571.0" fx:id="lv1"/>
+        <Button fx:id="buttonAddToDo" focusTraversable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: dimgray;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Button>
+        <TextField fx:id="tf1" prefHeight="36.0" promptText="Write your todo here..." style="-fx-background-color: dimgray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="65.0" />
+        <ListView fx:id="lv1" focusTraversable="false" prefHeight="335.0" prefWidth="586.0" style="-fx-background-color: dimgray;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
     </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </AnchorPane>
