@@ -36,6 +36,7 @@ public class MainApp extends Application {
             Scene scene = new Scene(todolist);
 
             primaryStage.setScene(scene);
+            scene.getStylesheets().add(MainApp.class.getResource("css/style.css").toExternalForm());
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
