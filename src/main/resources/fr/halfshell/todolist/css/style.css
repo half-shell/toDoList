@@ -11,6 +11,10 @@
   -fx-background-color: gray;
 }
 
+.list-cell:empty {
+  -fx-background-color: dimgray;
+}
+
 .scroll-bar:vertical>*.thumb {
   -fx-background-color: dimgray, dimgray, gray;
 }
