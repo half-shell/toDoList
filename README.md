@@ -4,15 +4,19 @@
 
   * Javafx integration
 
+## Maven
+This project now supports maven. To get it running, get installation instructions on [their official website] and get it running by doing a:
+'''
+mvn package
+'''
+It'll run tests, and builed the project if it passes them.
+
 ## NEED TO-DO
 
 ### Task definition
-  * List feature
-  * Get them time based
-
-Simple class diagram
-
-Estimated Work Time
+* Add a delete/done feature
+* Add serialization to data
+* Enhance design and appearance
 
 ## CONCEPT
 
