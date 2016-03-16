@@ -28,7 +28,7 @@ All these feature will have a visual return effect so javaFX can be exploited as
 
 ## SYMBOLIC RELEASES
 
-* Getting the GUI up and running
+* Getting the GUI up and running (Soon finished)
 * Finished the base CRUD
 * All done and beautifully beautifull
 
