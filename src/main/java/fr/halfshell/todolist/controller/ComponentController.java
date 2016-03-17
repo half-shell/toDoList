@@ -3,13 +3,13 @@ package fr.halfshell.todolist.controller;
 import fr.halfshell.todolist.model.ToDo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MultipleSelectionModel;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,17 +26,22 @@ public class ComponentController implements Initializable {
     @FXML // TodoText to Add
     private TextField textFieldToDo;
     // Observable list for auto-update in the list view
-    ObservableList<String> toDoObservableList = FXCollections.observableArrayList();
+    static ObservableList<String> toDoObservableList = FXCollections.observableArrayList();
 
 
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
 
-        // Action on button click
+        toDoListView.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
+            @Override
+            public ListCell call(ListView<String> param) {
+                return new ButtonCell();
+            }
+
+        });
+    // Action on button click
         buttonAddToDo.setOnAction(event -> {
             if(buttonAddToDo.getText().equals("Add"))
               addTf1Text();
-            else if(toDoListView.getSelectionModel() != null)
-                rmSelectedTodo(toDoListView.getSelectionModel().getSelectedIndex());
         });
         buttonAddToDo.setOnMouseExited(event-> buttonAddToDo.setStyle("-fx-background-color: dimgray"));
         buttonAddToDo.setOnMouseEntered(event-> buttonAddToDo.setStyle("-fx-background-color: DarkGray") );
@@ -48,15 +53,8 @@ public class ComponentController implements Initializable {
             }
         });
 
-
-        textFieldToDo.setOnMouseClicked(event->buttonAddToDo.setText("Add"));
         toDoListView.setOnMouseClicked(event->{
-            final MultipleSelectionModel<String> model = toDoListView.getSelectionModel();
-            final int selectedIdx = model.getSelectedIndex();
-            System.out.println("Todo " + model.getSelectedIndex() + " selected.");
-                if (selectedIdx == -1) {
-                    buttonAddToDo.setText("Add");
-                }else buttonAddToDo.setText("Del");
+            System.out.println("Todo " + toDoListView.getSelectionModel().getSelectedIndex() + " selected.");
         });
 
         // Displaying the ToDos
@@ -72,12 +70,16 @@ public class ComponentController implements Initializable {
         }
     }
 
-    public void rmSelectedTodo(int i){
+    public static void rmSelectedTodo(int i){
         if(!toDoObservableList.isEmpty()){
+            System.out.println("Todo " + i +": "+toDoObservableList.get(i) +" removed.");
             toDoObservableList.remove(i);
-            System.out.println("Todo " + i + " removed.");
         }
         else System.out.println("Todo list is empty.");
     }
 
+
+
 }
+
+
