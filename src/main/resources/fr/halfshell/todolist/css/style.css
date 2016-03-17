@@ -11,6 +11,13 @@
   -fx-background-color: gray;
 }
 
+.list-cell:empty {
+    -fx-background-color: dimgray;
+}
+.list-cell:selected {
+    -fx-background-color: DarkGray;
+}
+
 .scroll-bar:vertical>*.thumb {
   -fx-background-color: dimgray, dimgray, gray;
 }
@@ -22,3 +29,4 @@
 .text-field {
   -fx-text-fill: white;
 }
+

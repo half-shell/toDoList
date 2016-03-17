@@ -6,14 +6,14 @@ import java.util.ArrayList;
  * Created by John on 28/01/2016.
  */
 public class ToDo {
-    private static ArrayList<ToDo> toDoList = new ArrayList();
+    private static ArrayList<ToDo> toDoList = new ArrayList<>();
     private String description;
 
     public ToDo() {
     }
 
-    public ToDo(String p_description) {
-        this.description = p_description;
+    public ToDo(String description) {
+        this.description = description;
         toDoList.add(this);
     }
 
