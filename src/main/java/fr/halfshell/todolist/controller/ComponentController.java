@@ -55,7 +55,7 @@ public class ComponentController implements Initializable {
     // Add the text of TextField on a ToDoList and reload the ListView
     public void addTf1Text() {
         if (!tf1.getText().isEmpty()) {
-            ToDo newToDo = new ToDo(tf1.getText());
+            new ToDo(tf1.getText());
             tf1.setText("");
             reloadToDoList();
         }
