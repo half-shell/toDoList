@@ -29,8 +29,13 @@ public class ToDo {
         return description;
     }
 
+    public void removeTodo(){
+      toDoList.remove(this);
+    }
+
     public void setDescription(String description) {
         this.description = description;
+        toDoList.add(this);
     }
 
     public void addToToDoList() {

@@ -29,8 +29,8 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </Button>
-        <ListView fx:id="lv1" focusTraversable="false" minHeight="50.0" minWidth="175.0" style="-fx-background-color: dimgray;" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <TextField fx:id="tf1" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="529.0" promptText="Write your todo here..." style="-fx-background-color: dimgray; -fx-text-fill: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="66.0">
+        <ListView fx:id="toDoListView" focusTraversable="false" minHeight="50.0" minWidth="175.0" style="-fx-background-color: dimgray;" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <TextField fx:id="textFieldToDo" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="529.0" promptText="Write your todo here..." style="-fx-background-color: dimgray; -fx-text-fill: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="66.0">
          <font>
             <Font size="15.0" />
          </font>
