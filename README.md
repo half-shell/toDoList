@@ -5,11 +5,13 @@
   * Javafx integration
 
 ## Maven
-This project now supports maven. To get it running, get installation instructions on [their official website] and get it running by doing a:
-'''
+This project now supports maven. To get it running, install it via your favorite distribution package manager, or get installation instructions on [their official website][maven install] and get it running by doing a:
+```
 mvn package
-'''
-It'll run tests, and builed the project if it passes them.
+```
+More on that [here][maven run].
+In order for this to work, you'll have to have a working java setup (including javaFX), and maven installed.
+It'll run tests, and build the project if it passes the latter.
 
 ## NEED TO-DO
 
@@ -28,7 +30,9 @@ All these feature will have a visual return effect so javaFX can be exploited as
 
 ## SYMBOLIC RELEASES
 
-* Getting the GUI up and running
+* Getting the GUI up and running (Almost done)
 * Finished the base CRUD
-* All done and beautifully beautifull
+* All done and beautifully beautiful
 
+[maven run]: https://maven.apache.org/run.html
+[maven install]: https://maven.apache.org/install.html
