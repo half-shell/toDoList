@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" stylesheets="@../CSS/style.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.halfshell.todolist.controller.MainController">
+        <ListView fx:id="toDoListView" focusTraversable="false" minHeight="50.0" minWidth="175.0" stylesheets="@../CSS/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <TextField fx:id="textFieldToDo" focusTraversable="false" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#onEnter" prefHeight="36.0" prefWidth="529.0" promptText="Write your todo here..." style="-fx-background-color: dimgray; -fx-text-fill: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="66.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+        <Button fx:id="buttonAddToDo" onAction="#handleAddToDoAction" prefHeight="36.0" prefWidth="62.0" stylesheets="@../CSS/style.css" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

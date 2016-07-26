@@ -23,20 +23,19 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Awesome to-do list");
-
         showTodolistOverview();
     }
 
-    public void showTodolistOverview() {
+    private void showTodolistOverview() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/TodolistOverview.fxml"));
+            loader.setLocation(getClass().getResource("/FXML/TodolistOverview.fxml"));
             AnchorPane todolist = loader.load();
 
             Scene scene = new Scene(todolist);
 
             primaryStage.setScene(scene);
-            scene.getStylesheets().add(MainApp.class.getResource("css/style.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/CSS/style.css").toExternalForm());
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

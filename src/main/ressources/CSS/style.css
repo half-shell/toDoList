@@ -1,3 +1,12 @@
+.root {
+  -fx-background-color: gray;
+  -fx-border-width: 20;
+}
+
+.list-view {
+  -fx-background-color: dimgray;
+}
+
 .list-cell {
   -fx-cell-size: 30;
   -fx-text-fill: white;
@@ -28,5 +37,14 @@
 
 .text-field {
   -fx-text-fill: white;
+  -fx-background-color: dimgray;
+}
+
+.button {
+  -fx-background-color: dimgray;
+}
+
+.button:hover {
+  -fx-background-color: DarkGray;
 }
 
