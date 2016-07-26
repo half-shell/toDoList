@@ -29,3 +29,4 @@ Maven is supported by most of the IDEs out their, and you can can the package li
 * [X]Enhance design and appearance
 
 [maven run]: https://maven.apache.org/run.html
+[maven install]: https://maven.apache.org/install.html
