@@ -10,8 +10,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" stylesheets="@../CSS/style.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.halfshell.todolist.controller.MainController">
-        <ListView fx:id="toDoListView" focusTraversable="false" minHeight="50.0" minWidth="175.0" stylesheets="@../CSS/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+<AnchorPane fx:id="toDoAnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" stylesheets="@../CSS/style.css" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.halfshell.todolist.controller.MainController">
+        <ListView fx:id="toDoListView" focusTraversable="false" minHeight="50.0" minWidth="175.0" onMouseClicked="#handleListViewItemSelectedAction" stylesheets="@../CSS/style.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
         <TextField fx:id="textFieldToDo" focusTraversable="false" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#onEnter" prefHeight="36.0" prefWidth="529.0" promptText="Write your todo here..." style="-fx-background-color: dimgray; -fx-text-fill: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="66.0">
          <font>
             <Font size="15.0" />
