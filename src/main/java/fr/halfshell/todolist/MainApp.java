@@ -1,5 +1,5 @@
-/**
- * Created by half-shell on 22/01/16.
+/*
+  Created by half-shell on 22/01/16.
  */
 package fr.halfshell.todolist;
 

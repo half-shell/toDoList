@@ -5,6 +5,7 @@ package fr.halfshell.todolist.model;
  */
 public class ToDo {
     private String description;
+    private boolean done = false;
 
     public ToDo(String description) {
         this.description = description;
@@ -19,7 +20,9 @@ public class ToDo {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public boolean isDone(){ return done; }
+
+    public void switchDone(){
+        done = !done;
     }
 }
