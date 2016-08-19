@@ -22,13 +22,13 @@ import javafx.scene.layout.AnchorPane;
 public class MainController implements Initializable {
 
     @FXML // The main anchorPane
-    final private AnchorPane toDoAnchorPane;
+    private AnchorPane toDoAnchorPane;
     @FXML // List of ToDoList
-    private final ListView<ToDo> toDoListView;
+    private ListView<ToDo> toDoListView;
     @FXML // TodoText to Add
-    private final TextField textFieldToDo;
+    private TextField textFieldToDo;
     @FXML // Action button to add & delete
-    private final Button buttonAddToDo;
+    private Button buttonAddToDo;
 
     // Observable list for auto-update in the list view
     private static final ObservableList<ToDo> toDoObservableList = FXCollections.observableArrayList();
