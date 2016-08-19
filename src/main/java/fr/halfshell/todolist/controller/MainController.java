@@ -7,10 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import fr.halfshell.todolist.model.ToDo;
+import fr.halfshell.todolist.view.ListViewCell;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -31,11 +33,14 @@ public class MainController implements Initializable {
     // Observable list for auto-update in the list view
     private static final ObservableList<ToDo> toDoObservableList = FXCollections.observableArrayList();
 
+
     // this method is launched first
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
         // Displaying the ToDos
         toDoListView.setItems(toDoObservableList);
-        //TODO: Change the ListView for a TableView to let it be more flexible
+
+        // Creating new CellFactory so we can put the ToggleButton in it
+        toDoListView.setCellFactory(listView -> new ListViewCell());
     }
 
     @FXML
@@ -64,12 +69,12 @@ public class MainController implements Initializable {
             ToDo todo = new ToDo(textFieldToDo.getText());
             toDoObservableList.add(todo);
             textFieldToDo.clear();
-            // Requesting the focus so the textField placeholder appears everytime
+            // Requesting the focus so the textField placeholder appears every time
             toDoAnchorPane.requestFocus();
         }
     }
 
-    public void rmSelectedTodo(int i){
+    private void rmSelectedTodo(int i){
         if(!toDoObservableList.isEmpty()){
             toDoObservableList.remove(i);
             buttonAddToDo.setText("Add");
